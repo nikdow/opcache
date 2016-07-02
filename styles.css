@@ -1,0 +1,105 @@
+.cbd-opcache #container {
+  width: 1024px;
+  margin: auto;
+  position: relative; }
+.cbd-opcache h1 {
+  padding: 10px 0; }
+.cbd-opcache table {
+  border-collapse: collapse; }
+.cbd-opcache tbody tr:nth-child(even) {
+  background-color: #eee; }
+.cbd-opcache p.capitalize {
+  text-transform: capitalize; }
+.cbd-opcache .tabs {
+  position: relative;
+  float: left;
+  width: 60%; }
+.cbd-opcache .tab {
+  float: left; }
+.cbd-opcache .tab label {
+  background: #eee;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  margin-left: -1px;
+  position: relative;
+  left: 1px; }
+.cbd-opcache .tab [type=radio] {
+  display: none; }
+.cbd-opcache .tab th, .cbd-opcache .tab td {
+  padding: 8px 12px; }
+.cbd-opcache .content {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  height: 450px;
+  width: 100%;
+  overflow: auto; }
+.cbd-opcache .content table {
+  width: 100%; }
+.cbd-opcache .content th, .cbd-opcache .tab:nth-child(3) td {
+  text-align: left; }
+.cbd-opcache .content td {
+  text-align: right; }
+.cbd-opcache .clickable {
+  cursor: pointer; }
+.cbd-opcache [type=radio]:checked ~ label {
+  background: white;
+  border-bottom: 1px solid white;
+  z-index: 2; }
+.cbd-opcache [type=radio]:checked ~ label ~ .content {
+  z-index: 1; }
+.cbd-opcache #graph {
+  float: right;
+  width: 40%;
+  position: relative; }
+.cbd-opcache #graph > form {
+  position: absolute;
+  right: 60px;
+  top: -20px; }
+.cbd-opcache #graph > svg {
+  position: absolute;
+  top: 0;
+  right: 0; }
+.cbd-opcache #stats {
+  position: absolute;
+  right: 125px;
+  top: 145px; }
+.cbd-opcache #stats th, .cbd-opcache #stats td {
+  padding: 6px 10px;
+  font-size: 0.8em; }
+.cbd-opcache #partition {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background: #ddd;
+  display: none; }
+.cbd-opcache #close-partition {
+  display: none;
+  position: absolute;
+  z-index: 20;
+  right: 15px;
+  top: 15px;
+  background: #f9373d;
+  color: #fff;
+  padding: 12px 15px; }
+.cbd-opcache #close-partition:hover {
+  background: #D32F33;
+  cursor: pointer; }
+.cbd-opcache #partition rect {
+  stroke: #fff;
+  fill: #aaa;
+  fill-opacity: 1; }
+.cbd-opcache #partition rect.parent {
+  cursor: pointer;
+  fill: steelblue; }
+.cbd-opcache #partition text {
+  pointer-events: none; }
+.cbd-opcache label {
+  cursor: pointer; }
+
+/*# sourceMappingURL=styles.css.map */
