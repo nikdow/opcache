@@ -14,19 +14,20 @@ function cbdweb_opcache_menu() {
 }
 
 add_action('init', 'register_cbdweb_opcache_style');
-add_action('wp_footer', 'enqueue_cbdweb_opcache_style');
+add_action('in_admin_footer', 'enqueue_cbdweb_opcache_style');
 
 function register_cbdweb_opcache_style() {
+    error_log( 'register_cbdweb_opcache_style called' );
     wp_register_style('cbdweb_opcache', plugins_url('styles.css', __FILE__ ) );
     wp_register_script('cbdweb_opcache_d3', "//cdnjs.cloudflare.com/ajax/libs/d3/3.0.1/d3.v3.min.js" );
 }
 
 function enqueue_cbdweb_opcache_style() {
 	global $add_cbdweb_opcache_style;
-
+error_log( 'enqueue_cbdweb_opcache_style called');
 	if ( ! $add_cbdweb_opcache_style )
 		return;
-
+error_log( 'enqueue_cbdweb_opcache_style processing');
         wp_enqueue_style( 'cbdweb_opcache' );
         wp_enqueue_script( 'cbdweb_opcache_d3' );
 }
@@ -36,13 +37,19 @@ function cbdweb_opcache_write() {
             wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
     }
 
+    global $add_cbdweb_opcache_style;
+    $add_cbdweb_opcache_style = true;
+    
     if (!extension_loaded('Zend OPcache')) {
         echo '<div style="background-color: #F2DEDE; color: #B94A48; padding: 1em;">You do not have the Zend OPcache extension loaded, nothing to display.</div>';
         return;
     }
 
-    global $add_cbdweb_opcache_style;
-    $add_cbdweb_opcache_style = true;
+    
+  
+
+    
+    
 
     $dataModel = new OpCacheDataModel();
 
