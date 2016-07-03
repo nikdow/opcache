@@ -13,26 +13,17 @@ define('THOUSAND_SEPARATOR',true);
 add_action( 'admin_menu', 'cbdweb_opcache_menu' );
 
 function cbdweb_opcache_menu() {
-    add_submenu_page( 'tools.php', 'OPCache', 'OPCache', 'activate_plugins', 'opcache', 'cbdweb_opcache_write');
+    $page_hook = add_submenu_page( 'tools.php', 'OPCache', 'OPCache', 'activate_plugins', 'opcache', 'cbdweb_opcache_write');
+    add_action( 'load-' . $page_hook, 'cbdweb_opcache_admin_enqueue' );
 }
 
-add_action('init', 'register_cbdweb_opcache_style');
-add_action('in_admin_footer', 'enqueue_cbdweb_opcache_style');
-
-function register_cbdweb_opcache_style() {
-    error_log( 'register_cbdweb_opcache_style called' );
-    wp_register_style('cbdweb_opcache', plugins_url('styles.css', __FILE__ ) );
-    wp_register_script('cbdweb_opcache_d3', "//cdnjs.cloudflare.com/ajax/libs/d3/3.0.1/d3.v3.min.js" );
+function cbdweb_opcache_admin_enqueue(){
+    add_action( 'admin_enqueue_scripts', 'cbdweb_opcache_register' );
 }
 
-function enqueue_cbdweb_opcache_style() {
-	global $add_cbdweb_opcache_style;
-error_log( 'enqueue_cbdweb_opcache_style called');
-	if ( ! $add_cbdweb_opcache_style )
-		return;
-error_log( 'enqueue_cbdweb_opcache_style processing');
-        wp_enqueue_style( 'cbdweb_opcache' );
-        wp_enqueue_script( 'cbdweb_opcache_d3' );
+function cbdweb_opcache_register() {
+    wp_enqueue_style('cbdweb_opcache', plugins_url('styles.css', __FILE__ ) );
+    wp_enqueue_script('cbdweb_opcache_d3', "//cdnjs.cloudflare.com/ajax/libs/d3/3.0.1/d3.v3.min.js" );
 }
 
 function cbdweb_opcache_write() {
