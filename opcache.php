@@ -1,19 +1,20 @@
 <?php
 /*
 Plugin Name: CBDWeb OPCache
-Plugin URI: http://www.cbdweb.net/opcache
+Plugin URI: http://www.cbdweb.net/wordpress-opcache-plugin/
 Description: OPCache including scripts cached
-Version: .1
+Version: .2
 Author: Nik Dow
 Author URI: http://www.cbdweb.net
 */
 
 define('THOUSAND_SEPARATOR',true);
+define('opcache_capability', 'activate_plugins' )
 
 add_action( 'admin_menu', 'cbdweb_opcache_menu' );
 
 function cbdweb_opcache_menu() {
-    $page_hook = add_submenu_page( 'tools.php', 'OPCache', 'OPCache', 'activate_plugins', 'opcache', 'cbdweb_opcache_write');
+    $page_hook = add_submenu_page( 'tools.php', 'OPCache', 'OPCache', opcache_capability, 'opcache', 'cbdweb_opcache_write');
     add_action( 'load-' . $page_hook, 'cbdweb_opcache_admin_enqueue' );
 }
 
@@ -27,8 +28,8 @@ function cbdweb_opcache_register() {
 }
 
 function cbdweb_opcache_write() {
-    if ( !current_user_can( 'activate_plugins' ) )  {
-            wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+    if ( !current_user_can( opcache_capability ) )  {
+            wp_die( __( 'You do not have sufficient permissions to access this page. "activate_plugins" is required.' ) );
     }
 
     global $add_cbdweb_opcache_style;
