@@ -300,7 +300,7 @@ function cbdweb_opcache_write() {
             return "translate(8," + d.dx * ky / 2 + ")";
         }
 
-        $(document).ready(function() {
+        jQuery(document).ready(function($) {
 
             function handleVisualisationToggle(close) {
 
@@ -328,7 +328,7 @@ function cbdweb_opcache_write() {
 
             });
 
-        });
+        }(jQuery));
     </script>
         
     <?php
