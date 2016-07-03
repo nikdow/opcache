@@ -47,5 +47,5 @@ Yes
 
 == Upgrade Notice ==
 
-== 0.2 ==
-* first release
+= 0.2 =
+* Initial release
