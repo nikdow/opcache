@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: CBDWeb OPCache
+Plugin Name: OPCache Scripts
 Plugin URI: http://www.cbdweb.net/wordpress-opcache-plugin/
 Description: OPCache including scripts cached
 Version: .2
@@ -9,7 +9,7 @@ Author URI: http://www.cbdweb.net
 */
 
 define('THOUSAND_SEPARATOR',true);
-define('opcache_capability', 'activate_plugins' )
+define('opcache_capability', 'activate_plugins' );
 
 add_action( 'admin_menu', 'cbdweb_opcache_menu' );
 
