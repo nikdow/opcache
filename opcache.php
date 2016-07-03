@@ -7,6 +7,9 @@ Version: .1
 Author: Nik Dow
 Author URI: http://www.cbdweb.net
 */
+
+define('THOUSAND_SEPARATOR',true);
+
 add_action( 'admin_menu', 'cbdweb_opcache_menu' );
 
 function cbdweb_opcache_menu() {
