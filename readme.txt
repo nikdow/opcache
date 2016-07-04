@@ -1,7 +1,7 @@
 === OPCache Scripts ===
 Contributors: nikdow
-Donate link: http://example.com/
-Tags: opcache php 
+Donate link: http://www.cbdweb.net/donate
+Tags: cache, dashboard, monitor, OPcache, scripts, memory, optimisation, php, server, stat, stats, status, zend
 Requires at least: 3.0.1
 Tested up to: 4.5.3
 Stable tag: 0.2

@@ -23,8 +23,8 @@ function cbdweb_opcache_admin_enqueue(){
 }
 
 function cbdweb_opcache_register() {
-    wp_enqueue_style('cbdweb_opcache', plugins_url('styles.css', __FILE__ ) );
-    wp_enqueue_script('cbdweb_opcache_d3', "//cdnjs.cloudflare.com/ajax/libs/d3/3.0.1/d3.v3.min.js" );
+    wp_enqueue_style('cbdweb_opcache', plugins_url('assets/styles.css', __FILE__ ) );
+    wp_enqueue_script('cbdweb_opcache_d3', plugins_url('assets/d3.v3.min.js', __FILE__ ) );
 }
 
 function cbdweb_opcache_write() {
