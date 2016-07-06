@@ -101,7 +101,7 @@ class OpCacheDataModel {
                         </table>
                     </div>
                 </div>
-
+                
                 <div class="tab">
                     <input type="radio" id="tab-visualise" name="tab-group-1">
                     <label for="tab-visualise">Visualise Partition</label>
