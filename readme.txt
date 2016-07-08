@@ -39,13 +39,14 @@ Yes
 1. Status and visualisation of memory utilisation
 1. List of scripts cached
 1. Showing scripts loaded by file system structure, with visualisation of memory utilisation
+1. OPCache configuration settings
 
 == Changelog ==
 
-= 0.2 =
-* Initial release
+= 0.2.1 =
+* Improve screenshots
 
 == Upgrade Notice ==
 
-= 0.2 =
-* Initial release
+= 0.2.1 =
+* Improve screenshots, no need to upgrade from 0.2
