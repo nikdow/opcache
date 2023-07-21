@@ -2,9 +2,9 @@
 Contributors: nikdow
 Donate link: http://www.cbdweb.net/donate
 Tags: cache, dashboard, monitor, OPcache, scripts, memory, optimisation, php, server, stat, stats, status, zend
-Requires at least: 3.0.1
-Tested up to: 4.5.3
-Stable tag: 0.2
+Requires at least: 5.0
+Tested up to: 6.2
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 

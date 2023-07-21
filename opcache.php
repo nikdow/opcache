@@ -3,7 +3,7 @@
 Plugin Name: OPCache Scripts
 Plugin URI: http://www.cbdweb.net/wordpress-opcache-plugin/
 Description: OPCache including scripts cached
-Version: .2.1
+Version: 1.0
 Author: Nik Dow
 Author URI: http://www.cbdweb.net
 */
